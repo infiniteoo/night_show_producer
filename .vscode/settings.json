@@ -1,0 +1,12 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "libraries/commons-io-2.5.jar",
+        "libraries/commons-io-2.5-javadoc.jar",
+        "libraries/itextpdf-5.1.0.jar",
+        "libraries/java-getopt-1.0.14.jar",
+        "libraries/pdfbox-app-2.0.7.jar",
+        "libraries/tritonus_share.jar"
+    ],
+    "maven.view": "flat"
+}
