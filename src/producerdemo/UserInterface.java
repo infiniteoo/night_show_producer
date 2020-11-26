@@ -169,11 +169,11 @@ public class UserInterface extends JPanel implements ActionListener {
 
         }
         log.append(" complete!\n");
-
+        reader.close();
         return songList;
     }
 
-    public static ArrayList<String> loadMusicLog(String fileName, ArrayList database) throws FileNotFoundException, IOException {
+    public static ArrayList<String> loadMusicLog(String fileName, ArrayList<String> database) throws FileNotFoundException, IOException {
 
         ArrayList<String> songsPerPage = new ArrayList<>();
 
@@ -189,8 +189,7 @@ public class UserInterface extends JPanel implements ActionListener {
 
         }
 
-        Matcher m = p.matcher(str);
-
+        
         System.out.println("value of STR: " + str);
         String[] parts = str.split("03:30");
         for (int i = 0; i < parts.length; i++) {
