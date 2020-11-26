@@ -45,6 +45,8 @@ public class UserInterface extends JPanel implements ActionListener {
 
     JButton openLibraryButton, openLogButton;
     JFileChooser fc;
+   
+    
     JTextArea log;
     JTable table;
     Object[] songList;
@@ -88,11 +90,14 @@ public class UserInterface extends JPanel implements ActionListener {
         JPanel buttonPanel = new JPanel();
         fc = new JFileChooser();
         fc.setFileSelectionMode(JFileChooser.FILES_ONLY);
+        File defaultDirectory = new File("./pcn/");
+        fc.setCurrentDirectory(defaultDirectory);
         jf.add(mp);
         jf.pack();
         jf.setVisible(true);
 
-        songDatabase = new ArrayList<>(loadMusicFile("D:\\Amazon Drive\\pcn\\pcn library.txt"));
+      
+        songDatabase = new ArrayList<>(loadMusicFile("./pcn/pcn library.txt"));
 
     }
 
