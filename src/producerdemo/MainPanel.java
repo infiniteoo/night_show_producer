@@ -7,53 +7,32 @@ package producerdemo;
 
 import com.itextpdf.text.pdf.PdfReader;
 import com.itextpdf.text.pdf.parser.PdfTextExtractor;
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.event.ActionEvent;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import static java.lang.Math.abs;
-import static java.lang.Math.abs;
-
-import static java.lang.Math.abs;
-import static java.lang.StrictMath.abs;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import javax.sound.sampled.AudioFileFormat;
 import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
-import javax.sound.sampled.DataLine;
 import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.DefaultListModel;
 import javax.swing.JFileChooser;
-import javax.swing.JTable;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
-//import static jdk.nashorn.internal.runtime.Context.DEBUG;
 import static jdk.nashorn.internal.runtime.Context.DEBUG;
-
 //import static nightshowproducer.NightShowProducer.combineThisCollection;
 import org.apache.commons.io.FileUtils;
 import static org.tritonus.share.TDebug.out;
-import javax.swing.table.DefaultTableCellRenderer;
-
 import org.apache.commons.io.FilenameUtils;
 
 /**
@@ -756,11 +735,11 @@ public class MainPanel extends javax.swing.JPanel {
 
         }
         log.append(" complete!\n");
-
+        reader.close();
         return songList;
     }
 
-    public ArrayList<String> loadMusicLog(String fileName, ArrayList database)
+    public ArrayList<String> loadMusicLog(String fileName, ArrayList<String> database)
             throws FileNotFoundException, IOException {
 
         ArrayList<String> songsPerPage = new ArrayList<>();
@@ -852,6 +831,7 @@ public class MainPanel extends javax.swing.JPanel {
         JFileChooser fc;
         fc = new JFileChooser();
         fc.setFileSelectionMode(JFileChooser.FILES_ONLY);
+        
 
         int returnVal = fc.showOpenDialog(fc);
 

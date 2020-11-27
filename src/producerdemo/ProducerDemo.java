@@ -28,11 +28,11 @@ public class ProducerDemo {
                     new UserInterface();
                 } catch (FileNotFoundException ex) {
                     Logger.getLogger(ProducerDemo.class.getName()).log(Level.SEVERE, null, ex);
-                }
+                };
 
-            }
+            };
 
         });
-    }
+    };
 
-}
+};
