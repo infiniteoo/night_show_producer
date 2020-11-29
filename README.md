@@ -15,7 +15,7 @@ Night Show Producer is a simple program that turns a "music log" PDF file (gener
 
 ### Introduction
 
-This is the program that started it all!  The app that ultimately led my down the path of wanting to be a developer.  It's not much to look at, but I'm proud to say this bad boy got a good two years of real-world, on-air execution for a nationally-syndicated radio show.
+This is the program that started it all!  The app that ultimately led my down the path of wanting to be a developer.  It's not much to look at, but I'm proud of it, and it laid the foundation for what became a newfound hobby and hopefully what becomes my career.
 
 I had zero experience with Java before embarking on this adventure, and ended up taking an amazing online Java course taught by the University of Helsinki called MOOC: https://java-programming.mooc.fi/
 
